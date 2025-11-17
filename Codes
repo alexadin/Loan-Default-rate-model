@@ -1,0 +1,28 @@
+#Training a logistic regression
+from sklearn.linear_model import LogisticRegression
+#Called as a function with or without parameters
+clf_logistic = LogisticRegression(solver = 'lbfgs')
+#Uses the method . fit() to train
+clf_logitics.fit(training_columns, np.ravel(training_labels)
+
+#Training Columns: all of the columns in our data except loan_status
+
+x = cr_loan.drop('loan_status'. axis = 1)
+y  = cr_loan [['loan_status']]
+
+Use train_test_split() function already within sci-kit learn
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_sizae = .4, random_state = 123)
+
+X = cr_loan_clean[["loan_int_rate"]]
+y = cr_loan_clean[["loan_status"]]
+
+# Create and fit a logistic regression model
+clf_logistic_single = LogisticRegression(solver ='lbfgs')
+clf_logistic_single.fit(X, np.ravel(y))
+
+# Print the parameters of the model
+print(clf_logistic_single.get_params())
+
+# Print the intercept of the model
+print(clf_logistic_single.intercept_)
